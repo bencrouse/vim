@@ -1,0 +1,24 @@
+[submodule "bundle/ack.vim"]
+	path = bundle/ack.vim
+	url = git://github.com/mileszs/ack.vim.git
+[submodule "bundle/javascript"]
+	path = bundle/javascript
+	url = git://github.com/pangloss/vim-javascript.git
+[submodule "bundle/nerdtree"]
+	path = bundle/nerdtree
+	url = git://github.com/scrooloose/nerdtree.git
+[submodule "bundle/nerdcommenter"]
+	path = bundle/nerdcommenter
+	url = git://github.com/scrooloose/nerdcommenter.git
+[submodule "bundle/surround"]
+	path = bundle/surround
+	url = git://github.com/tpope/vim-surround.git
+[submodule "bundle/rails"]
+	path = bundle/rails
+	url = git://github.com/tpope/vim-rails.git
+[submodule "bundle/rspec"]
+	path = bundle/rspec
+	url = git://github.com/taq/vim-rspec.git
+[submodule "bundle/autoclose"]
+	path = bundle/autoclose
+	url = git://github.com/Townk/vim-autoclose.git
