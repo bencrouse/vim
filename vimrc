@@ -1,10 +1,22 @@
 set nocompatible                                 " Must come first because it changes other options.
+filetype off                                     " Turn off file type to allow pathogen to load
 
-silent! call pathogen#runtime_append_all_bundles()
-silent! call pathogen#helptags()
+call pathogen#runtime_append_all_bundles()
 
-syntax enable                                    " Turn on syntax highlighting.
 filetype plugin indent on                        " Turn on file type detection.
+syntax on                                        " Turn on syntax highlighting.
+
+let mapleader=":"                                " Set leader
+
+set tabstop=4                                    " Set tab size
+set shiftwidth=4                                 " Set how many columns text gets indented with indent operations
+set noexpandtab                                  " Don't autoconvert tabs into spaces
+set autoindent                                   " Set automatic indenting
+
+set nowrap                                       " Turn off line wrapping.
+set list                                         " Show hidden characters
+set listchars=tab:▸\ ,eol:¬                      " Set hidden characters
+highlight NonText guifg=#4a4a59                  " Set hidden characters color
 
 set showcmd                                      " Display incomplete commands.
 set showmode                                     " Display the mode you're in.
@@ -15,24 +27,17 @@ set hidden                                       " Handle multiple buffers bette
 
 set wildmenu                                     " Enhanced command line completion.
 set wildmode=list:longest,list:full              " Complete files like a shell.
-set wildignore+=.git                             " Ignore .get directory in completion
-
-set ignorecase                                   " Case-insensitive searching.
-set smartcase                                    " But case-sensitive if expression contains a capital letter.
+set wildignore+=.git                             " Ignore .git directory in completion
 
 set number                                       " Show line numbers.
 set ruler                                        " Show cursor position.
 
 set incsearch                                    " Highlight matches as you type.
 set hlsearch                                     " Highlight matches.
+nnoremap <CR> :noh<CR><CR>                       " This unsets the last search pattern register by hitting return
 set ignorecase                                   " Case-insensitive searching
 set smartcase                                    " Search case-insensitive when search string is all-lowercase,
                                                  " otherwise search case-sensitive
-
-set wrap                                         " Turn on line wrapping.
-set list                                         " Show hidden characters
-set listchars=tab:▸\ ,eol:¬                      " Set hidden characters
-highlight NonText guifg=#4a4a59                  " Set hidden characters color
 
 set scrolloff=4                                  " Lines of context around the cursor.
 
@@ -48,24 +53,25 @@ set laststatus=2                                 " Show the status line all the 
 
 colorscheme vividchalk                           " Set colors
 
-nnoremap <leader>a :Ack                          " Remap Ack
-nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR> " Remap :W to strip EOL whitespace
+" Remap Ack
+nnoremap <Leader>a :Ack
+nnoremap <Leader>W :%s/\s\+$//<cr>:let @/=''<CR> " Remap :W to strip EOL whitespace
 
 " Tab mappings.
-map <leader>tt :tabnew<cr>
-map <leader>te :tabedit
-map <leader>tc :tabclose<cr>
-map <leader>to :tabonly<cr>
-map <leader>tn :tabnext<cr>
-map <leader>tp :tabprevious<cr>
-map <leader>tf :tabfirst<cr>
-map <leader>tl :tablast<cr>
-map <leader>tm :tabmove
+map <Leader>tt :tabnew<cr>
+map <Leader>te :tabedit
+map <Leader>tc :tabclose<cr>
+map <Leader>to :tabonly<cr>
+map <Leader>tn :tabnext<cr>
+map <Leader>tp :tabprevious<cr>
+map <Leader>tf :tabfirst<cr>
+map <Leader>tl :tablast<cr>
+map <Leader>tm :tabmove
 
-au FocusLost * :wa                               " Automatically save files when they lose focus
+au FocusLost * :wa                                " Automatically save files when they lose focus
 
 " NERDTree configuration
-map <Leader>n :NERDTreeToggle<CR>                " Map :n to toggle tree navigation
+map <Leader>n :NERDTreeToggle<CR>                 " Map :n to toggle tree navigation
 
 " Remember last location in file
 if has("autocmd")
