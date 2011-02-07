@@ -73,6 +73,9 @@ au FocusLost * :wa                                " Automatically save files whe
 " NERDTree configuration
 map <Leader>n :NERDTreeToggle<CR>                 " Map :n to toggle tree navigation
 
+" Command-T configuration
+let g:CommandTMaxHeight=20
+
 " Remember last location in file
 if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
