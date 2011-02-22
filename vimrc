@@ -14,9 +14,6 @@ set noexpandtab                                  " Don't autoconvert tabs into s
 set autoindent                                   " Set automatic indenting
 
 set nowrap                                       " Turn off line wrapping.
-set list                                         " Show hidden characters
-set listchars=tab:▸\ ,eol:¬                      " Set hidden characters
-highlight NonText guifg=#4a4a59                  " Set hidden characters color
 
 set showcmd                                      " Display incomplete commands.
 set showmode                                     " Display the mode you're in.
@@ -54,6 +51,10 @@ set directory=$HOME/.vim/tmp//,.                 " Keep swap files in one locati
 set laststatus=2                                 " Show the status line all the time
 
 colorscheme vividchalk                           " Set colors
+
+set list                                         " Show hidden characters
+set listchars=tab:▸\ ,eol:¬                      " Set hidden characters
+highlight NonText ctermfg=4 guifg=#4a4a59        " Set hidden characters color
 
 " Remap Ack
 nnoremap <Leader>a :Ack
