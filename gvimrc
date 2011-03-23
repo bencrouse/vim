@@ -3,7 +3,7 @@ set antialias                                         " MacVim: smooth fonts.
 set encoding=utf-8                                    " Use UTF-8 everywhere.
 set guioptions-=T                                     " Hide toolbar.
 set background=light                                  " Background.
-set lines=60 columns=180                              " Window dimensions.
+set lines=80 columns=200                              " Window dimensions.
 set guioptions-=r                                     " Don't show right scrollbar
 set guioptions-=T                                     " Don't show the toolbar
 
