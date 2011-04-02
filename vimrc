@@ -14,6 +14,7 @@ set noexpandtab                                  " Don't autoconvert tabs into s
 set autoindent                                   " Set automatic indenting
 
 set nowrap                                       " Turn off line wrapping.
+set foldlevel=1                                  " Turn off automatic code folding
 
 set showcmd                                      " Display incomplete commands.
 set showmode                                     " Display the mode you're in.
@@ -85,3 +86,4 @@ if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
     \| exe "normal g'\"" | endif
 endif
+
