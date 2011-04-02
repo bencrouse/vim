@@ -87,3 +87,33 @@ if has("autocmd")
     \| exe "normal g'\"" | endif
 endif
 
+" File type detection
+
+" Ruby
+au BufNewFile,BufRead *.rb,*.rbw,*.gem,*.gemspec set filetype=ruby
+
+" Rakefile
+au BufNewFile,BufRead [rR]akefile,*.rake         set filetype=ruby
+
+" IRB config
+au BufNewFile,BufRead .irbrc,irbrc               set filetype=ruby
+
+" Rackup
+au BufNewFile,BufRead *.ru                       set filetype=ruby
+
+" Capistrano
+au BufNewFile,BufRead Capfile                    set filetype=ruby
+
+" Bundler
+au BufNewFile,BufRead Gemfile                    set filetype=ruby
+
+" Autotest
+au BufNewFile,BufRead .autotest                  set filetype=ruby
+
+" eRuby
+au BufNewFile,BufRead *.erb,*.rhtml              set filetype=eruby
+
+" File type tab settings
+autocmd FileType ruby setlocal tabstop=2 shiftwidth=2 expandtab
+autocmd FileType eruby setlocal tabstop=4 shiftwidth=4
+
