@@ -14,6 +14,7 @@ set noexpandtab                                  " Don't autoconvert tabs into s
 set autoindent                                   " Set automatic indenting
 
 set nowrap                                       " Turn off line wrapping.
+set foldlevel=1                                  " Turn off automatic code folding
 
 set showcmd                                      " Display incomplete commands.
 set showmode                                     " Display the mode you're in.
@@ -50,7 +51,8 @@ set directory=$HOME/.vim/tmp//,.                 " Keep swap files in one locati
 
 set laststatus=2                                 " Show the status line all the time
 
-colorscheme vividchalk                           " Set colors
+set background=dark
+colorscheme solarized                            " Set colors
 
 set list                                         " Show hidden characters
 set listchars=tab:▸\ ,eol:¬                      " Set hidden characters
@@ -84,3 +86,34 @@ if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
     \| exe "normal g'\"" | endif
 endif
+
+" File type detection
+
+" Ruby
+au BufNewFile,BufRead *.rb,*.rbw,*.gem,*.gemspec set filetype=ruby
+
+" Rakefile
+au BufNewFile,BufRead [rR]akefile,*.rake         set filetype=ruby
+
+" IRB config
+au BufNewFile,BufRead .irbrc,irbrc               set filetype=ruby
+
+" Rackup
+au BufNewFile,BufRead *.ru                       set filetype=ruby
+
+" Capistrano
+au BufNewFile,BufRead Capfile                    set filetype=ruby
+
+" Bundler
+au BufNewFile,BufRead Gemfile                    set filetype=ruby
+
+" Autotest
+au BufNewFile,BufRead .autotest                  set filetype=ruby
+
+" eRuby
+au BufNewFile,BufRead *.erb,*.rhtml              set filetype=eruby
+
+" File type tab settings
+autocmd FileType ruby setlocal tabstop=2 shiftwidth=2 expandtab
+autocmd FileType eruby setlocal tabstop=4 shiftwidth=4
+

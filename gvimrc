@@ -7,7 +7,8 @@ set lines=80 columns=200                              " Window dimensions.
 set guioptions-=r                                     " Don't show right scrollbar
 set guioptions-=T                                     " Don't show the toolbar
 
-colorscheme vividchalk                                " Set colors
+set background=dark
+colorscheme solarized                                 " Set colors
 
 map <D-F> :Ack<space>                                 " Command-Shift-F for Ack
 map <D-/> <plug>NERDCommenterToggle<CR>               " Command-/ to toggle comments
