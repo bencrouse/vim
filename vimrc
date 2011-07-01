@@ -14,7 +14,7 @@ set noexpandtab                                  " Don't autoconvert tabs into s
 set autoindent                                   " Set automatic indenting
 
 set nowrap                                       " Turn off line wrapping.
-set foldlevel=1                                  " Turn off automatic code folding
+set nofoldenable                                 " Turn off automatic code folding
 
 set showcmd                                      " Display incomplete commands.
 set showmode                                     " Display the mode you're in.
