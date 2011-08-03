@@ -52,7 +52,7 @@ set directory=$HOME/.vim/tmp                     " Keep swap files in one locati
 set laststatus=2                                 " Show the status line all the time
 
 set background=dark
-colorscheme solarized                            " Set colors
+colorscheme emacs                                " Set colors
 
 set list                                         " Show hidden characters
 set listchars=tab:▸\ ,eol:¬                      " Set hidden characters
