@@ -87,6 +87,9 @@ if has("autocmd")
     \| exe "normal g'\"" | endif
 endif
 
+" Highlight current word matches
+autocmd CursorMoved * silent! exe printf('match SpellLocal /\<%s\>/', expand('<cword>'))
+
 " File type detection
 
 " Ruby
