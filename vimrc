@@ -84,6 +84,7 @@ map <Leader>n :NERDTreeToggle<CR>                 " Map :n to toggle tree naviga
 
 " Command-T configuration
 let g:CommandTMaxHeight=20
+nnoremap <silent> <Leader>bt :CommandTBuffer<CR>
 
 " Remember last location in file
 if has("autocmd")
