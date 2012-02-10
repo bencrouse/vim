@@ -125,3 +125,6 @@ au BufNewFile,BufRead *.erb,*.rhtml              set filetype=eruby
 autocmd FileType ruby setlocal tabstop=2 shiftwidth=2 expandtab softtabstop=2
 autocmd FileType eruby setlocal tabstop=4 shiftwidth=4
 
+" In Rails, use tabs for JavaScript
+autocmd User Rails/**/*.js set tabstop=4 shiftwidth=4 softtabstop=4 noexpandtab
+
