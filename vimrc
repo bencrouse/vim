@@ -30,7 +30,9 @@ set wildignore+=.git                             " Ignore .git directory in comp
 set number                                       " Show line numbers.
 set ruler                                        " Show cursor position.
 set cursorline                                   " Highlight current line
-hi CursorLine cterm=NONE ctermbg=black
+hi CursorLine cterm=NONE ctermfg=NONE ctermbg=235 guibg=#222222
+autocmd WinEnter * setlocal cursorline           " Show current line highlight when entering a window
+autocmd WinLeave * setlocal nocursorline         " Remove current line highlight when leaving a window
 
 set incsearch                                    " Highlight matches as you type.
 set hlsearch                                     " Highlight matches.
