@@ -29,8 +29,8 @@ set wildignore+=.git                             " Ignore .git directory in comp
 
 set number                                       " Show line numbers.
 set ruler                                        " Show cursor position.
-"set cursorline                                   " Highlight current line
-"hi CursorLine cterm=NONE ctermbg=black
+set cursorline                                   " Highlight current line
+hi CursorLine cterm=NONE ctermbg=black
 
 set incsearch                                    " Highlight matches as you type.
 set hlsearch                                     " Highlight matches.
