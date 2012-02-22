@@ -58,11 +58,13 @@ syntax enable
 set background=dark
 let g:solarized_termcolors = 256
 let g:solarized_termtrans = 1
-colorscheme solarized                                " Set colors
+colorscheme solarized                            " Set colors
 
 set list                                         " Show hidden characters
 set listchars=tab:▸\ ,eol:¬                      " Set hidden characters
 highlight NonText ctermfg=4 guifg=#4a4a59        " Set hidden characters color
+
+au FocusLost * :wa                                " Automatically save files when they lose focus
 
 " Remap Ack
 nnoremap <Leader>a :Ack
@@ -79,7 +81,10 @@ map <Leader>tf :tabfirst<cr>
 map <Leader>tl :tablast<cr>
 map <Leader>tm :tabmove
 
-au FocusLost * :wa                                " Automatically save files when they lose focus
+" Buffer movement mappings
+nnoremap <silent> ,z :bp<CR>
+nnoremap <silent> ,x :bn<CR>
+
 
 " NERDTree configuration
 map <Leader>n :NERDTreeToggle<CR>                 " Map :n to toggle tree navigation
