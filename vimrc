@@ -85,13 +85,8 @@ map <Leader>tm :tabmove
 nnoremap <silent> ,z :bp<CR>
 nnoremap <silent> ,x :bn<CR>
 
-
 " NERDTree configuration
 map <Leader>n :NERDTreeToggle<CR>                 " Map :n to toggle tree navigation
-
-" Command-T configuration
-let g:CommandTMaxHeight=20
-nnoremap <silent> <Leader>bt :CommandTBuffer<CR>
 
 " Remember last location in file
 if has("autocmd")
