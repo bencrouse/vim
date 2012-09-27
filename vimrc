@@ -120,6 +120,9 @@ au BufNewFile,BufRead Gemfile                    set filetype=ruby
 " Autotest
 au BufNewFile,BufRead .autotest                  set filetype=ruby
 
+" JBuilder
+au BufNewFile,BufRead *.jbuilder                 set filetype=ruby
+
 " eRuby
 au BufNewFile,BufRead *.erb,*.rhtml              set filetype=eruby
 
