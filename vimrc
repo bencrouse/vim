@@ -126,8 +126,12 @@ au BufNewFile,BufRead *.jbuilder                 set filetype=ruby
 " eRuby
 au BufNewFile,BufRead *.erb,*.rhtml              set filetype=eruby
 
+" God
+au BufNewFile,BufRead *.god                      set filetype=ruby
+
+
 " File type tab settings
 autocmd FileType ruby setlocal tabstop=2 shiftwidth=2 expandtab softtabstop=2
-autocmd FileType eruby setlocal tabstop=4 shiftwidth=4
+autocmd FileType eruby set tabstop=4 shiftwidth=4 expandtab softtabstop=4
 autocmd FileType javascript set tabstop=4 shiftwidth=4 expandtab softtabstop=4
 
