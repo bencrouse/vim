@@ -66,20 +66,14 @@ highlight NonText ctermfg=4 guifg=#4a4a59        " Set hidden characters color
 
 au FocusLost * :wa                                " Automatically save files when they lose focus
 
+" Autocomplete
+imap <Tab> <C-P>
+set complete=.,b,u,]
+set completeopt=menu,preview
+
 " Remap Ack
 nnoremap <Leader>a :Ack
 nnoremap <Leader>W :%s/\s\+$//<cr>:let @/=''<CR> " Remap :W to strip EOL whitespace
-
-" Tab mappings.
-map <Leader>tt :tabnew<cr>
-map <Leader>te :tabedit
-map <Leader>tc :tabclose<cr>
-map <Leader>to :tabonly<cr>
-map <Leader>tn :tabnext<cr>
-map <Leader>tp :tabprevious<cr>
-map <Leader>tf :tabfirst<cr>
-map <Leader>tl :tablast<cr>
-map <Leader>tm :tabmove
 
 " Buffer movement mappings
 nnoremap <silent> ,z :bp<CR>
