@@ -63,24 +63,24 @@ colorscheme solarized                            " Set colors
 set list                                         " Show hidden characters
 set listchars=tab:▸\ ,trail:·                    " Set hidden characters
 
-au FocusLost * :wa                                " Automatically save files when they lose focus
+au FocusLost * :wa                               " Automatically save files when they lose focus
 
 " Autocomplete
 set complete=.,b,u,]
 
 function! Smart_TabComplete()
-  let line = getline('.')                         " current line
+  let line = getline('.')                        " current line
 
-  let substr = strpart(line, -1, col('.')+1)      " from the start of the current
-                                                  " line to one character right
-                                                  " of the cursor
-  let substr = matchstr(substr, "[^ \t]*$")       " word till cursor
+  let substr = strpart(line, -1, col('.')+1)     " from the start of the current
+                                                 " line to one character right
+                                                 " of the cursor
+  let substr = matchstr(substr, "[^ \t]*$")      " word till cursor
 
-  if (strlen(substr)==0)                          " nothing to match on empty string
+  if (strlen(substr)==0)                         " nothing to match on empty string
     return "\<Tab>"
   endif
 
-  return "\<C-P>"                                 " existing text matching
+  return "\<C-P>"                                " existing text matching
 endfunction
 
 inoremap <Tab> <C-R>=Smart_TabComplete()<CR>
