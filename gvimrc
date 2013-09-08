@@ -8,6 +8,8 @@ set guioptions-=r                                     " Don't show right scrollb
 set guioptions-=T                                     " Don't show the toolbar
 
 set background=dark
+colorscheme solarized                                 " Set colors
+
 set cursorline                                        " Highlight current line"
 
 map <D-F> :Ack<space>                                 " Command-Shift-F for Ack

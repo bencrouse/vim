@@ -56,27 +56,15 @@ set laststatus=2                                 " Show the status line all the 
 set t_Co=256
 syntax enable
 set background=dark
+let g:solarized_termcolors = 256
+let g:solarized_termtrans = 1
+colorscheme solarized                            " Set colors
 
-" OLD BAD WHITESPACE"
 set list                                         " Show hidden characters
-set listchars=tab:▸\                             " Set hidden characters
-" NEW BAD WHITESPACE
+set listchars=tab:▸\ ,eol:¬                      " Set hidden characters
 highlight NonText ctermfg=4 guifg=#4a4a59        " Set hidden characters color
-highlight ExtraWhitespace ctermbg=red guibg=red
-autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
-autocmd WinEnter * match ExtraWhitespace /\s\+$/
-autocmd BufEnter * match ExtraWhitespace /\s\+$/
-autocmd BufAdd * match ExtraWhitespace /\s\+$/
-autocmd BufCreate * match ExtraWhitespace /\s\+$/
-autocmd BufNew * match ExtraWhitespace /\s\+$/
-autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-autocmd InsertLeave * match ExtraWhitespace /\s\+$/
-autocmd Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\t/
-
 
 au FocusLost * :wa                                " Automatically save files when they lose focus
-
-map Q <Nop>                                       " Disable entering Ex mode
 
 " Remap Ack
 nnoremap <Leader>a :Ack
@@ -107,7 +95,7 @@ if has("autocmd")
 endif
 
 " Highlight current word matches
-"autocmd CursorMoved * silent! exe printf('match SpellLocal /\<%s\>/', expand('<cword>'))
+autocmd CursorMoved * silent! exe printf('match SpellLocal /\<%s\>/', expand('<cword>'))
 
 " File type detection
 
