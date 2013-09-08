@@ -61,8 +61,7 @@ let g:solarized_termtrans = 1
 colorscheme solarized                            " Set colors
 
 set list                                         " Show hidden characters
-set listchars=tab:▸\ ,eol:¬                      " Set hidden characters
-highlight NonText ctermfg=4 guifg=#4a4a59        " Set hidden characters color
+set listchars=tab:▸\ ,trail:·                    " Set hidden characters
 
 au FocusLost * :wa                                " Automatically save files when they lose focus
 
