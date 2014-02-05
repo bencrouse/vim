@@ -53,17 +53,17 @@ set directory=$HOME/.vim/tmp                     " Keep swap files in one locati
 
 set laststatus=2                                 " Show the status line all the time
 
-set t_Co=256
-syntax enable
-set background=dark
-let g:solarized_termcolors = 256
-let g:solarized_termtrans = 1
-colorscheme solarized                            " Set colors
-
 set list                                         " Show hidden characters
 set listchars=tab:▸\ ,trail:·                    " Set hidden characters
 
 au FocusLost * :wa                               " Automatically save files when they lose focus
+
+" Colors
+set t_Co=256
+syntax enable
+colorscheme molokai
+hi CursorLine cterm=NONE ctermfg=NONE ctermbg=237 guibg=#333333
+hi Visual ctermbg=237
 
 " Autocomplete
 set complete=.,b,u,]
