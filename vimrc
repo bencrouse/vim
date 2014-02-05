@@ -104,6 +104,9 @@ endif
 
 " Highlight current word matches
 autocmd CursorMoved * silent! exe printf('match SpellLocal /\<%s\>/', expand('<cword>'))
+hi clear SpellLocal
+hi SpellLocal cterm=underline
+
 
 " File type detection
 
