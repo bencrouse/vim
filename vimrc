@@ -25,12 +25,12 @@ set hidden                                       " Handle multiple buffers bette
 
 set wildmenu                                     " Enhanced command line completion.
 set wildmode=list:longest,list:full              " Complete files like a shell.
-set wildignore+=.git                             " Ignore .git directory in completion
+set wildignore+=.git,tmp,log,bin                 " Ignore directories in completion
+set wildignore+=*/public/system/*
 
 set number                                       " Show line numbers.
 set ruler                                        " Show cursor position.
 set cursorline                                   " Highlight current line
-hi CursorLine cterm=NONE ctermfg=NONE ctermbg=235 guibg=#222222
 autocmd WinEnter * setlocal cursorline           " Show current line highlight when entering a window
 autocmd WinLeave * setlocal nocursorline         " Remove current line highlight when leaving a window
 
