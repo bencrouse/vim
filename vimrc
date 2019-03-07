@@ -25,7 +25,7 @@ set hidden                                       " Handle multiple buffers bette
 
 set wildmenu                                     " Enhanced command line completion.
 set wildmode=list:longest,list:full              " Complete files like a shell.
-set wildignore+=.git,tmp,log,bin                 " Ignore directories in completion
+set wildignore+=.git,tmp,log,bin,node_modules    " Ignore directories in completion
 set wildignore+=*/public/system/*
 
 set number                                       " Show line numbers.
