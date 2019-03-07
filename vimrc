@@ -140,6 +140,9 @@ au BufNewFile,BufRead *.erb,*.rhtml              set filetype=eruby
 " God
 au BufNewFile,BufRead *.god                      set filetype=ruby
 
+" rails-decorators
+au BufNewFile,BufRead *.decorator                set filetype=ruby
+
 " Scss
 au BufNewFile,BufRead *.scss                     set filetype=css
 
